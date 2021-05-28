@@ -1,0 +1,39 @@
+// ======================================== [IMPORTS]
+@import './_colors.scss';
+@import './_transition.scss';
+
+// ======================================== [BUTTONS]
+.btn {
+    height: 47px;
+    padding: 0 1.7em;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    transition: $transition-1;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+
+    i {
+        color: black;
+        font-size: 24px;
+    }
+
+    &:hover {
+        transform: scale(0.97);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+// ========== [PROMPT]
+.btn-prompt {
+    background-color: $color-1;
+}
+
+// ========== [CONVERT]
+.convert {
+    width: 76.5%;
+    font-family: 'Roboto Mono', monospace;
+}
