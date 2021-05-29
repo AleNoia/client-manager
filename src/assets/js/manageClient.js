@@ -1,40 +1,52 @@
 import clients from './clients.js'
-const namesList = document.querySelector('.namesList')
+import creator from './creator.js'
 
 function manageClient() {
+    const create = creator();
+
     this.start = () => {
         listClients();
+        showDetails();
     }
 
     function listClients() {
-        for (let client in clients) {
-            let id = client
-            let newName = nameFactory(clients[id].name)
+        const namesList = document.querySelector('.namesList')
+        for (let id in clients) {
+            let newName = create.createName(clients[id].name)
             namesList.insertAdjacentHTML('beforeend',
-            `
-            <li class="nameList">${newName}</li> 
+                `
+                <li class="nameList ${id}">${newName}</li> 
             `
             );
         }
     }
 
-    function nameFactory(name) {
-        let arrayName = name.split(' ')
+    function createDetailsDiv(client) {
+        let detailsSection = document.querySelector('.detailsSection')
+        detailsSection.innerHTML = ''
+        detailsSection.insertAdjacentHTML('beforeend',
+            `
+            <li class="clientDetails">${client.name}</li> 
+            <li class="clientDetails">${client.cpf}</li> 
+            <li class="clientDetails">${client.birthday}</li> 
+        `
+        )
 
-        if (arrayName.length > 3){
+    }
 
-            let smallerName2 = arrayName[2].split("").slice(0, 1).join() + '.';
-            arrayName[2] = smallerName2
-            if(arrayName.length > 4){
-                let smallerName3 = arrayName[3].split("").slice(0, 1).join() + '.';
-                arrayName[3] = smallerName3
-            }
-            var newName = arrayName.join(" ")
-            return newName
+    function showDetails() {
+        for (let i in clients) {
+            const client = clients[i]
+            document.addEventListener('click', e => {
+                const el = e.target
+                if (el.classList.contains(i)) createDetailsDiv(client)
+            })
         }
 
-        return name
     }
+
+
+    
 }
 
 export default manageClient;
