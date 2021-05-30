@@ -5,7 +5,7 @@ function manageClient() {
     const create = creator();
 
     // ======================================== [START MANAGER]
-    this.start = () => {
+    function start() {
         listClients();
         showDetails();
     }
@@ -23,47 +23,40 @@ function manageClient() {
         }
     }
 
-    // ======================================== [CREATING A DIV TO DETAILS OF THE CLIENTS]
-    function createDetailsDiv(client) {
-        let detailsSection = document.querySelector('.detailsSection')
-        const birthday = create.createAge(client.birthday)
-        detailsSection.innerHTML = ''
-        detailsSection.insertAdjacentHTML('beforeend',
-            `
-        <li class="clientDetails">${client.name}</li> 
-        <li class="clientDetails">${client.cpf}</li> 
-        <li class="clientDetails">${client.birthday}</li> 
-        <li class="clientDetails">${birthday}</li> 
-        `
-        )
-    }
-
     // ======================================== [SHOWING DETAILS OF THE CLIENTS]
     function showDetails() {
+        const nameClient = document.querySelector('.nameClient')
+        const emailClient = document.querySelector('.emailClient')
+        const cpfClient = document.querySelector('.cpfClient')
+
         for (let i in clients) {
             const client = clients[i]
+
             document.addEventListener('click', e => {
                 const el = e.target
+
                 if (el.classList.contains(i)) {
-                    createDetailsDiv(client);
-                    userHighlighted(client)
+                    nameClient.innerHTML = client.name
+                    emailClient.innerHTML = client.email
+                    cpfClient.innerHTML = client.cpf
+
                 }
-                // if (el.classList.contains(i)) {
-                //     let elHtml = el.innerHTML 
-                //     // client.classList.add('h1')
-                //     console.log(clients[i])
-                // }
+
+                userHighlighted(el) // highlight client
             })
         }
     }
 
+    // ======================================== [HIGHLIGHT CLIENT CLICKED]
     function userHighlighted(client) {
-        const namesList = document.querySelector('.namesList')
-        for (let i = 0; i < namesList.children.length; i++) {
-            if(namesList.children[i].tagName == "DIV") namesList.children[i].style.backgroundColor = "#FFFFFF";
-        }
+        const nameList = document.querySelectorAll('.nameList')
+        nameList.forEach(el => el.classList.toggle('h1', el === client))
     }
 
+    // ======================================== [RETURNING START APP]
+    return {
+        start,
+    }
 }
 
 export default manageClient;

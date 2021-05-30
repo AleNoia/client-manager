@@ -1,10 +1,10 @@
 import managerClient from './manageClient.js'
 
-const app = new managerClient();
+const app = managerClient();
 
-try{
+try {
     app.start();
-}catch(e){
+} catch (e) {
     console.log('[error] Uncaught error!')
     console.log(e)
 }
