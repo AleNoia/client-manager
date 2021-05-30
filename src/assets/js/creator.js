@@ -1,4 +1,5 @@
 function creator() {
+    // ======================================== [ABBREVIATION OF NAMES]
     function createName(name) {
         let arrayName = name.split(' ')
 
@@ -14,12 +15,26 @@ function creator() {
             return newName
         }
 
+        // else 
         return name
     }
+
+    // ======================================== [GENERATE AGE ACCORDING TO DATE OF BIRTH]
+    function createAge(date){
+        const now = new Date()
+        let arrayDate = date.split("/")
+        let yearBirthday = arrayDate[2]
+        let thisYear = now.getFullYear()
+        let birthday = thisYear - yearBirthday
+        return birthday
+
+    }
     
+    // ======================================== [RETURNING FUNCTIONS]
     return {
 
-        createName
+        createName,
+        createAge
 
     }
 }
