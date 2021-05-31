@@ -1,0 +1,28 @@
+// ======================================== [IMPORTS]
+@import '../_shadow.scss';
+@import '../_colors.scss';
+@import '../_transition.scss';
+
+// ======================================== [BUTTONS]
+.btn {
+    height: 47px;
+    padding: 0 1.7em;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    transition: $transition-1;
+    color: #fff;
+
+    i {
+        color: hsl(0, 0%, 100%) !important;
+    }
+
+    &:hover {
+        transform: scale(0.97);
+    }
+
+    &:active {
+        transform: scale(0.85);
+    }
+}

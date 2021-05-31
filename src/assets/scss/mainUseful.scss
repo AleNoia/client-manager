@@ -2,13 +2,15 @@
 @import './reset';
 @import './colors';
 @import './shadow';
-@import './buttons';
 @import './transition';
 @import './isFlex';
 @import './isGrid';
 @import './Spacing/Margin';
 @import './Spacing/Padding';
+@import './Components/buttons';
+@import './Components/footer';
 @import './Components/scroll';
+@import './Components/navbarVertical';
 
 // ======================================== [PROJECT]
 @import './project'
