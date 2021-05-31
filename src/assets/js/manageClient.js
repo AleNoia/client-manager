@@ -28,6 +28,17 @@ function manageClient() {
         const nameClient = document.querySelector('.nameClient')
         const emailClient = document.querySelector('.emailClient')
         const cpfClient = document.querySelector('.cpfClient')
+        const rgClient = document.querySelector('.rgClient')
+        const cellularPhoneClient = document.querySelector('.cellularPhoneClient')
+        const landlineClient = document.querySelector('.landlineClient')
+        const birthdayClient = document.querySelector('.birthdayClient')
+        const ageClient = document.querySelector('.ageClient')
+        const cepClient = document.querySelector('.cepClient')
+        const districtClient = document.querySelector('.districtClient')
+        const cityClient = document.querySelector('.cityClient')
+        const stateClient = document.querySelector('.stateClient')
+        const addressClient = document.querySelector('.addressClient')
+        const numberClient = document.querySelector('.numberClient')
 
         for (let i in clients) {
             const client = clients[i]
@@ -39,6 +50,19 @@ function manageClient() {
                     nameClient.innerHTML = client.name
                     emailClient.innerHTML = client.email
                     cpfClient.innerHTML = client.cpf
+                    rgClient.innerHTML = client.rg
+                    cellularPhoneClient.innerHTML = client.cellularPhone
+                    landlineClient.innerHTML = client.landline
+                    birthdayClient.innerHTML = client.birthday
+                    const age = create.createAge(client.birthday)
+                    ageClient.innerHTML = age
+                    cepClient.innerHTML = client.cep
+                    districtClient.innerHTML = client.district
+                    cityClient.innerHTML = client.city
+                    stateClient.innerHTML = client.state
+                    addressClient.innerHTML = client.address
+                    numberClient.innerHTML = client.number
+
 
                 }
 

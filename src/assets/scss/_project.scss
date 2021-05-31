@@ -3,6 +3,7 @@
 @import './isFlex';
 @import './isGrid';
 @import './transition';
+@import './shadow';
 @import './Components/scroll';
 
 // ======================================== [PROJECT]
@@ -25,6 +26,9 @@ main {
     padding: 2em;
     overflow-y: hidden;
     transition: $transition-2;
+    position: sticky;
+    bottom: 1rem;
+    align-self: flex-end;
     @include scroll-2();
     background-image: $gradient-1;
 
@@ -41,7 +45,7 @@ main {
     }
 
     .namesListContent {
-        padding-right: .5em;
+        padding-right: 17px;
     }
 
 
@@ -64,39 +68,48 @@ main {
     }
 
     .active {
-        i {
-            font-size: 1.2em;
-        }
-
         background-color: $color-5;
         border-radius: 10px 0;
-        border-bottom: 2.5px solid white;
     }
+}
+
+.block {
+    display: block;
 }
 
 .detailsSection {
     width: 100%;
 
+    .groupFlex {
+        @include is-flex(center, flex-start);
+    }
+
     .sectionInformation {
-        @include is-flex(center, space-between);
         min-width: 50%;
-        margin-bottom: 1.6em;
+
+        .information {
+            margin-right: 3em;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
 
         .nameClient {
-            font-size: 36px;
+            font-size: 26px;
         }
 
         span {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 26px;
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 20px;
+        opacity: .75;
+        font-weight: bold;
         margin-bottom: .4em;
     }
 }
@@ -106,4 +119,12 @@ main {
     width: 100%;
     text-align: start;
     font-family: 'Signika', sans-serif;
+}
+
+.card {
+    padding: 1em 1.5em;
+    border-radius: 13px;
+    margin-bottom: .8em;
+    box-shadow: $shadow-1;
+    background-color: rgb(255, 255, 255);
 }

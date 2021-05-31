@@ -19,7 +19,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   font-family: 'Signika', sans-serif;
-  color: #36393F;
+  color: #36393f;
   font-weight: regular;
 }
 
@@ -33,17 +33,16 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: .5em;
-}
-
-body::-webkit-scrollbar-track {
-  border-radius: .7em;
+  width: 17px;
+  padding: 20px 0;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#208b3a), color-stop(#2b9d46), color-stop(#35b053), color-stop(#40c360), to(#4ad66d));
-  background-image: linear-gradient(to right top, #208b3a, #2b9d46, #35b053, #40c360, #4ad66d);
+  background-color: #208d3b;
   cursor: pointer;
+  border-radius: .7em;
+  border: 5px solid transparent;
+  background-clip: padding-box;
 }
 
 ol, ul {
@@ -133,6 +132,24 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.is-flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -652,6 +669,24 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.is-flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -757,18 +792,26 @@ main {
   overflow-y: hidden;
   -webkit-transition: ease 0.25s;
   transition: ease 0.25s;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 1rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   background-image: -webkit-gradient(linear, left bottom, right top, from(#208b3a), color-stop(#2b9d46), color-stop(#35b053), color-stop(#40c360), to(#4ad66d));
   background-image: linear-gradient(to right top, #208b3a, #2b9d46, #35b053, #40c360, #4ad66d);
 }
 
 .navbarVertical::-webkit-scrollbar {
-  width: .5em;
+  width: 17px;
+  padding: 20px 0;
 }
 
 .navbarVertical::-webkit-scrollbar-thumb {
-  background-color: #208b3a;
+  background-color: #208d3b;
   cursor: pointer;
   border-radius: .7em;
+  border: 5px solid transparent;
+  background-clip: padding-box;
 }
 
 .navbarVertical * {
@@ -784,7 +827,7 @@ main {
 }
 
 .navbarVertical .namesListContent {
-  padding-right: .5em;
+  padding-right: 17px;
 }
 
 .navbarVertical .navBrand {
@@ -818,47 +861,56 @@ main {
 .navbarVertical .active {
   background-color: rgba(0, 0, 0, 0.267);
   border-radius: 10px 0;
-  border-bottom: 2.5px solid white;
 }
 
-.navbarVertical .active i {
-  font-size: 1.2em;
+.block {
+  display: block;
 }
 
 .detailsSection {
   width: 100%;
 }
 
-.detailsSection .sectionInformation {
+.detailsSection .groupFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.detailsSection .sectionInformation {
   min-width: 50%;
-  margin-bottom: 1.6em;
+}
+
+.detailsSection .sectionInformation .information {
+  margin-right: 3em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .detailsSection .sectionInformation .nameClient {
-  font-size: 36px;
+  font-size: 26px;
 }
 
 .detailsSection .sectionInformation span {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .detailsSection h1 {
-  font-size: 36px;
+  font-size: 26px;
 }
 
 .detailsSection h2 {
-  font-size: 26px;
+  font-size: 20px;
+  opacity: .75;
+  font-weight: bold;
   margin-bottom: .4em;
 }
 
@@ -867,5 +919,14 @@ main {
   width: 100%;
   text-align: start;
   font-family: 'Signika', sans-serif;
+}
+
+.card {
+  padding: 1em 1.5em;
+  border-radius: 13px;
+  margin-bottom: .8em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
+  background-color: white;
 }
 /*# sourceMappingURL=mainUseful.css.map */

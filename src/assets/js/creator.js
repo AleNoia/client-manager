@@ -21,9 +21,10 @@ function creator() {
 
     // ======================================== [GENERATE AGE ACCORDING TO DATE OF BIRTH]
     function createAge(date){
+
         const now = new Date()
         let thisYear = now.getFullYear()
-        let arrayDate = date.split("/")
+        let arrayDate = date.toString().split("/");
         let yearBirthday = arrayDate[2]
         let birthday = thisYear - yearBirthday
         return birthday

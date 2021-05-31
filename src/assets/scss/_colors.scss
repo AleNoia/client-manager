@@ -1,15 +1,15 @@
 // ======================================== [COLORS PROJECT]
-$color-1: #35b053;
-$color-2: #208b3a;
+$color-1: hsl(135, 54%, 45%);
+$color-2: hsl(135, 63%, 34%);
 $color-3: hsla(135, 63%, 22%, 0.267);
 $color-4: hsla(135, 63%, 56%, 0.3);
 $color-5: hsla(0, 0%, 0%, 0.267);
+$color-6: hsla(220, 8%, 23%, 0.15);
+$color-7: hsl(220, 8%, 23%);
 
 // ======================================== [GRADIENT PROJECT]
 $gradient-1: linear-gradient(to right top, #208b3a, #2b9d46, #35b053, #40c360, #4ad66d);
 $gradient-2: linear-gradient(to right top, #25a244, #27ab48, #29b44b, #2bbd4f, #2dc653);
-$gradient-border-1: linear-gradient(to right bottom, hsla(0, 0%, 100%, 0), hsl(0, 0%, 100%)) 1;
-$gradient-border-2: linear-gradient(to left top, #9EF5FF, #23B1D9) 1;
 
 // ======================================== [COLORS BUTTONS]
 $color-primary: linear-gradient(to right bottom, #0069d9, #1374e1, #2280ea, #2f8bf1, #3b97f9);
