@@ -7,14 +7,24 @@
     width: .5em;
   }
 
-  /* Track */
   &::-webkit-scrollbar-track {
     border-radius: .7em;
   }
 
-  /* Handle */
   &::-webkit-scrollbar-thumb {
-    background-color: $color-1;
+    background-image: $gradient-1;
     cursor: pointer;
+  }
+}
+
+@mixin scroll-2() {
+  &::-webkit-scrollbar {
+    width: .5em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-2;
+    cursor: pointer;
+    border-radius: .7em;
   }
 }

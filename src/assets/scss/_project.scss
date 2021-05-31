@@ -1,120 +1,109 @@
 // ======================================== [IMPORTS]
 @import './colors';
 @import './isFlex';
+@import './isGrid';
+@import './transition';
+@import './Components/scroll';
 
 // ======================================== [PROJECT]
-// body {
-//     padding: .8em;
-//     background-color: $color-2;
+body {
+    width: 100%;
+    @include is-flex(flex-start, flex-start);
+    background-color: $color-4
+}
 
-//     main {
-//         height: 90vh;
-//         @include is-flex-column(center, flex-start);
-//     }
+main {
+    @extend .grid-9;
+    margin-top: 3.5em;
+    padding: 0 3em;
+    @include is-flex(flex-start, flex-start);
+}
 
-//     footer {
-//         height: 40vh;
-//         font-family: 'Roboto Mono', monospace;
-//         @include is-flex-column(center, flex-start);
+.navbarVertical {
+    @extend .grid-3;
+    height: 100vh;
+    padding: 2em;
+    overflow-y: hidden;
+    transition: $transition-2;
+    @include scroll-2();
+    background-image: $gradient-1;
 
-//         .footer-buttons {
-//             display: flex;
-//             flex-wrap: wrap;
-//             flex: 0 1 150px;
-//             justify-content: center;
-//         }
-//     }
-
-//     .a {
-//         color: $color-1;
-//         text-decoration: none;
-//         border-bottom: 2px solid $color-1;
-//     }
-
-//     .resultContainer {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-
-//     .result {
-//         color: $color-1;
-//         font-size: 28px;
-//     }
-
-//     .copy {
-//         top: 0;
-//         right: 0;
-//         height: 100%;
-//         // width: 100%;
-//     }
-
-//     .title {
-//         width: 75%;
-//         font-size: 24px;
-//         @include is-flex-column(flex-start, flex-start);
-//     }
-
-    .h1 {
-        color: $color-1;
+    & * {
+        color: white;
     }
 
-//     input {
-//         width: 100%;
-//         height: 100%;
-//         font-size: 28px;
-//         color: $color-1;
-//         border: none;
-//         background-color: $color-2;
+    &:hover {
+        .namesListContent {
+            padding-right: 0;
+        }
 
-//         &:focus {
-//             outline: none;
-//         }
-//     }
+        overflow-y: auto;
+    }
 
-//     // ========== [CONTAINER] 
-//     .container {
-//         height: 100px;
-//         width: 75%;
-//         padding: 0 .4em;
-//         border: 3px solid $color-1;
-//         @include is-flex-column(flex-start, center);
-//         position: relative;
-//     }
-
-//     .label {
-//         position: absolute;
-//         top: -10px;
-//         left: 20px;
-//         height: 20px;
-//         width: max-content;
-//         color: $color-1;
-//         padding: 0 .4em;
-//         background-color: $color-2;
-//         color: $color-1;
-//         text-align: center;
-//     }
-
-//     // ========== [LABEL BTN]
-//     .label-btn {
-//         height: 25px;
-//         width: max-content;
-//         padding: 0 1em;
-//         position: absolute;
-//         top: -15px;
-//         left: 120px;
-//         color: $color-1;
-//         font-size: 14px;
-//         font-weight: bold;
-//         text-align: center;
-//         transition: $transition-1;
-//         border: none;
-//         cursor: pointer;
-//         background-color: $color-2;
+    .namesListContent {
+        padding-right: .5em;
+    }
 
 
-//         &:hover{
-//             background-color: $color-1;
-//             color: $color-2;
-//         }
-//     }
-// }
+    .navBrand {
+        @include is-flex(center, flex-start);
+        padding: .8em 0;
+        font-size: 28px;
+
+        i {
+            margin-right: .4em;
+        }
+    }
+
+    .navItem {
+        padding: 1em;
+        height: 100%;
+        border-radius: 10px;
+        margin-bottom: .8em;
+        background-color: $color-3;
+    }
+
+    .active {
+        i {
+            font-size: 1.2em;
+        }
+
+        background-color: $color-5;
+        border-radius: 10px 0;
+        border-bottom: 2.5px solid white;
+    }
+}
+
+.detailsSection {
+    width: 100%;
+
+    .sectionInformation {
+        @include is-flex(center, space-between);
+        min-width: 50%;
+        margin-bottom: 1.6em;
+
+        .nameClient {
+            font-size: 36px;
+        }
+
+        span {
+            font-size: 18px;
+        }
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-bottom: .4em;
+    }
+}
+
+.btn {
+    font-size: 16px;
+    width: 100%;
+    text-align: start;
+    font-family: 'Signika', sans-serif;
+}

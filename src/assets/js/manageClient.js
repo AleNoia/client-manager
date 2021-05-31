@@ -16,8 +16,8 @@ function manageClient() {
         for (let id in clients) {
             let newName = create.createName(clients[id].name)
             namesList.insertAdjacentHTML('beforeend',
-                `
-            <li class="nameList ${id}">${newName}</li> 
+            `
+            <button class="btn nameList navItem ${id}"><i class="fas fa-user mr-2"></i>${newName}</button> 
             `
             );
         }
@@ -50,7 +50,7 @@ function manageClient() {
     // ======================================== [HIGHLIGHT CLIENT CLICKED]
     function userHighlighted(client) {
         const nameList = document.querySelectorAll('.nameList')
-        nameList.forEach(el => el.classList.toggle('h1', el === client))
+        nameList.forEach(el => el.classList.toggle('active', el === client))
     }
 
     // ======================================== [RETURNING START APP]

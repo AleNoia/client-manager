@@ -21,16 +21,39 @@
 </head>
 
 <body>
-    <main>
-        <section class="namesListSection">
+    <nav class="namesListSection navbarVertical">
+        <div class="namesListContent">
+            <div class="navBrand">
+                <i class="fas fa-users"></i>
+                <h1>Client Manager</h1>
+            </div>
             <ul class="namesList"></ul>
-        </section>
-        <hr>
+        </div>
+    </nav>
+    <main>
         <section class="detailsSection">
             <div class="client">
-                <h1 class="nameClient">Nome de usuário</h1>
-                <p class="emailClient">Email de usuário</p>
-                <p class="cpfClient">CPF de usuário</p>
+                <div class="sectionInformation">
+                    <div class="information">
+                        <h1><i class="fas fa-user mr-1"></i><span class="nameClient">Client name</span></h1>
+                    </div>
+                </div>
+                <div class="sectionInformation">
+                    <div class="information">
+                        <h2><i class="fas fa-envelope mr-1"></i>Client email</h2>
+                        <span class="emailClient">Client email</span>
+                    </div>
+                </div>
+                <div class="sectionInformation">
+                    <div class="information">
+                        <h2><i class="fas fa-id-card mr-1"></i>Client CPF</h2>
+                        <span class="cpfClient">Client CPF</span>
+                    </div>
+                    <div class="information">
+                        <h2><i class="fas fa-id-card mr-1"></i>Client CPF</h2>
+                        <span class="cpfClient">Client CPF</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
