@@ -822,6 +822,15 @@ body {
       flex-wrap: wrap;
 }
 
+.card {
+  padding: 1em 1.5em;
+  border-radius: 13px;
+  margin-bottom: .8em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
+  background-color: white;
+}
+
 .is-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1076,14 +1085,5 @@ main {
   width: 100%;
   text-align: start;
   font-family: 'Signika', sans-serif;
-}
-
-.card {
-  padding: 1em 1.5em;
-  border-radius: 13px;
-  margin-bottom: .8em;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
-  background-color: white;
 }
 /*# sourceMappingURL=mainUseful.css.map */
