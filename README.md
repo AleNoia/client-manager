@@ -71,7 +71,7 @@ The ```main.js``` file starts application and handles possible errors.
 ***
 # <a name="TechnologiesUsed"></a> ⚙ Technologies used
 
-Technologies that were used in the construction of the project:
+Technologies that were used in the development of the project:
 
 - [JavaScript](https://www.javascript.com)
 - [HTML](https://html.com)
