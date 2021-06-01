@@ -808,81 +808,18 @@ footer .btn-footer {
   width: 100%;
 }
 
-.navbarVertical {
-  height: 100vh;
-  padding: 2em;
-  overflow-y: hidden;
-  -webkit-transition: ease 0.25s;
-  transition: ease 0.25s;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 1rem;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#208b3a), color-stop(#2b9d46), color-stop(#35b053), color-stop(#40c360), to(#4ad66d));
-  background-image: linear-gradient(to right top, #208b3a, #2b9d46, #35b053, #40c360, #4ad66d);
-}
-
-.navbarVertical::-webkit-scrollbar {
-  width: 17px;
-  padding: 20px 0;
-}
-
-.navbarVertical::-webkit-scrollbar-thumb {
-  background-color: #208d3b;
-  cursor: pointer;
-  border-radius: .7em;
-  border: 5px solid transparent;
-  background-clip: padding-box;
-}
-
-.navbarVertical * {
-  color: white;
-}
-
-.navbarVertical:hover {
-  overflow-y: auto;
-}
-
-.navbarVertical:hover .namesListContent {
-  padding-right: 0;
-}
-
-.navbarVertical .namesListContent {
-  padding-right: 17px;
-}
-
-.navbarVertical .navBrand {
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: .8em 0;
-  font-size: 28px;
-}
-
-.navbarVertical .navBrand i {
-  margin-right: .4em;
-}
-
-.navbarVertical .navItem {
-  padding: 1em;
-  height: 100%;
-  border-radius: 10px;
-  margin-bottom: .8em;
-  background-color: rgba(21, 91, 38, 0.267);
-}
-
-.navbarVertical .active {
-  background-color: rgba(0, 0, 0, 0.267);
-  border-radius: 10px 0;
 }
 
 .is-flex {
@@ -1004,6 +941,83 @@ main {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.navbarVertical {
+  height: 100vh;
+  padding: 2em;
+  overflow-y: hidden;
+  -webkit-transition: ease 0.25s;
+  transition: ease 0.25s;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 1rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#208b3a), color-stop(#2b9d46), color-stop(#35b053), color-stop(#40c360), to(#4ad66d));
+  background-image: linear-gradient(to right top, #208b3a, #2b9d46, #35b053, #40c360, #4ad66d);
+}
+
+.navbarVertical::-webkit-scrollbar {
+  width: 17px;
+  padding: 20px 0;
+}
+
+.navbarVertical::-webkit-scrollbar-thumb {
+  background-color: #208d3b;
+  cursor: pointer;
+  border-radius: .7em;
+  border: 5px solid transparent;
+  background-clip: padding-box;
+}
+
+.navbarVertical * {
+  color: white;
+}
+
+.navbarVertical:hover {
+  overflow-y: auto;
+}
+
+.navbarVertical:hover .navbarContent {
+  padding-right: 0;
+}
+
+.navbarVertical .navbarContent {
+  padding-right: 17px;
+}
+
+.navbarVertical .navBrand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: .8em 0;
+  font-size: 28px;
+}
+
+.navbarVertical .navBrand i {
+  margin-right: .4em;
+}
+
+.navbarVertical .navItem {
+  padding: 1em;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: .8em;
+  background-color: rgba(21, 91, 38, 0.267);
+}
+
+.navbarVertical .active {
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 10px 0;
 }
 
 .block {
